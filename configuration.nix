@@ -4,14 +4,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules/nixos/hyprland.nix
+      ./modules/nixos/fonts.nix
     ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  console.keyMap = "br-abnt2";
  
-  services.xserver.enable = true;
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
   
